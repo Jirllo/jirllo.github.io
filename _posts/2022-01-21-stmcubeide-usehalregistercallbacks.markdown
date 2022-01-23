@@ -11,7 +11,7 @@ image:
   width: 160
   height: 100
 ---
-# How to using register callback in STM32 HAL
+# How to use register callback in STM32 HAL
 The simplest form of interrupt handling in the STM HAL library is to override __weak HAL interrupt handler function. (I assume that ```HAL_***_IRQHandler(...)``` means HAL drivers interrupt handler function with attribute __week, e.g. ```__weak void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)``` in stm32fxx_hal_tim.c file)
 ```c
 // Example of handle output compare 1 event interrupt on timer htim1
