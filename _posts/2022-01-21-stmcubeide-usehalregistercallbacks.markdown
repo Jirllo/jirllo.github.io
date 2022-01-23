@@ -76,7 +76,7 @@ void TIM8_BRK_TIM12_IRQHandler(void)
   }
 }
 ```
-Fortunately HAL library provides another option that is registered callback functions for each peripheral separately. First needed is change directive ```#define USE_HAL_TIM_REGISTER_CALLBACKS``` values from ```0U``` to ```1U```, then HAL drivers library allows use registered callback. It is best done in the STM32CubeMX code generator to avoid overwrite this until regenerate code. [STM32CubeMX RegisterCallback](../assets/Post_1/stm32mx.png)
+Fortunately HAL library provides another option that is registered callback functions for each peripheral separately. First needed is change directive ```#define USE_HAL_TIM_REGISTER_CALLBACKS``` values from ```0U``` to ```1U```, then HAL drivers library allows use registered callback. It is best done in the STM32CubeMX code generator to avoid overwrite this until regenerate code. [STM32CubeMX RegisterCallback](/assets/Post_1/stm32mx.png) 
 ```c
 // Assume that timer 1 have configured interrupt until output compare 1 event, and callback register function is myCallback
 void myCallback(TIM_HandleTypeDef *htim)
@@ -104,4 +104,4 @@ void init_start_tim1()
 # Sumary
 Use register callback have some benefits and disadvantages:
 * This is associated with a larger memory footprint, but its reduced the number of checked conditions when handling interrupts.  
-* Using register_callbacks on STM32 HAL peripheral implementation could reduce development time and enhance readability of code.
+* Using register_callbacks on STM32 HAL peripheral implementation could reduce development time and enhance readability of code
