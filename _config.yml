@@ -19,7 +19,7 @@ timezone: Europe/Warsaw
 
 title: Jirllo blog                          # the main title
 
-tagline:    # it will display as the sub-title
+tagline: Blog about electronics, embedded programing based on STM32 family   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Blog about electronics, embedded programing based on STM32 family
@@ -80,7 +80,7 @@ theme_mode:  # [light|dark]
 img_cdn: 'https://cdn.jsdelivr.net/gh/Jirllo/jirllo.github.io@master'
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/chip_on_sock.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
