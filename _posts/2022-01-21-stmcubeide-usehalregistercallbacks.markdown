@@ -77,8 +77,6 @@ void TIM8_BRK_TIM12_IRQHandler(void)
 }
 ```
 Fortunately HAL library provides another option that is registered callback functions for each peripheral separately. First needed is change directive ```#define USE_HAL_TIM_REGISTER_CALLBACKS``` values from ```0U``` to ```1U```, then HAL drivers library allows use registered callback. It is best done in the STM32CubeMX code generator to avoid overwrite this until regenerate code. [STM32CubeMX RegisterCallback](../assets/Post_1/stm32mx.png)
-(if you don't have this window install latest version of STM32CubeMX). First is needed to registered yours callback function using ```HAL_TIM_RegisterCallback()```(If doesnt register function dont worry, it will used standard function handler ```HAL_***_IRQHandler(...)```) Then using the peripheral look like:
-
 ```c
 // Assume that timer 1 have configured interrupt until output compare 1 event, and callback register function is myCallback
 void myCallback(TIM_HandleTypeDef *htim)
